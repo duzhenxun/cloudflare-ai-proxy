@@ -1,0 +1,47 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "cloudflare-ai-proxy",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-11-28",
+  "assets": {
+    "binding": "ASSETS",
+    "directory": "./public"
+  },
+  "observability": {
+    "enabled": true
+  },
+  "vars": {
+    "MODELS_CONFIG": [
+      {
+        "endpoint": "/v1/fd816c5ea0e9e99af371aadf4ffd601e/proxy/openrouter",
+        "id": "qwen/qwen3-coder:free",
+        "name": "qwen3-coder:free"
+      },
+      {
+        "endpoint": "/v1/fd816c5ea0e9e99af371aadf4ffd601e/proxy/compat",
+        "id": "google-ai-studio/models/gemini-2.5-flash",
+        "name": "gemini-2.5-flash"
+      },
+      {
+        "endpoint": "/v1/fd816c5ea0e9e99af371aadf4ffd601e/proxy/compat",
+        "id": "google-ai-studio/gemini-2.5-flash-lite",
+        "name": "gemini-2.5-flash-lite"
+      },
+      {
+        "endpoint": "/v1/fd816c5ea0e9e99af371aadf4ffd601e/proxy/compat",
+        "id": "google-ai-studio/gemini-3-flash-preview",
+        "name": "gemini-3-flash-preview"
+      },
+      {
+        "endpoint": "/v1/fd816c5ea0e9e99af371aadf4ffd601e/proxy/compat",
+        "id": "google-ai-studio/gemini-3-pro-preview",
+        "name": "gemini-3-pro-preview"
+      },
+      {
+        "endpoint": "/v1/fd816c5ea0e9e99af371aadf4ffd601e/proxy/compat",
+        "id": "grok/grok-4-1-fast-non-reasoning",
+        "name": "grok-4-1-fast-non-reasoning"
+      }
+    ]
+  }
+}
